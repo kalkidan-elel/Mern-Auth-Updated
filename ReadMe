@@ -1,0 +1,87 @@
+# // Steps to create and run the app
+
+1. Create and open the root folder --> PS C:\Users\hp\Desktop\MERN Auth>
+2. Create react app using --> PS C:\Users\hp\Desktop\MERN Auth> npx create-vite@latest client
+   - Select a framework: react
+   - Select a variant: JavaScript
+   - Install with npm and start now? Yes
+
+   Now you can run the app by using this command --> npm run dev
+
+3. Remove uneccessary files like asset defaut images, App.css and the default file of App.jsx
+   and change with the rfc (react functional component)
+
+4. Install taiwind css and configure it by the follow the rules of tailwind css.
+   PS C:\Users\hp\Desktop\MERN Auth\client> npm install tailwindcss @tailwindcss/vite
+
+   ## Configure the Vite plugin
+
+   import { defineConfig } from 'vite'
+   import tailwindcss from '@tailwindcss/vite'
+   export default defineConfig({
+   plugins: [
+   tailwindcss(),
+   ],
+   })
+
+   Import Tailwind CSS in to index.css ---> @import "tailwindcss";
+
+5. Move the .gitignore file from client to root folder and adjust with the following updated
+   good gitignore file.
+
+   # Logs
+
+   logs
+   _.log
+   npm-debug.log_
+   yarn-debug.log*
+   yarn-error.log*
+   pnpm-debug.log*
+   lerna-debug.log*
+
+   # Environment variables (VERY IMPORTANT)
+
+   .env
+   .env.\*
+
+   # Dependencies
+
+   node_modules/
+
+   # Build outputs
+
+   client/dist
+   client/build
+   server/dist
+   dist-ssr
+
+   # Local files
+
+   \*.local
+
+   # Optional backend folders
+
+   uploads/
+   tmp/
+
+   # Editor directories and files
+
+   .vscode/_
+   !.vscode/extensions.json
+   .idea
+   .DS_Store
+   _.suo
+   _.ntvs_
+   _.njsproj
+   _.sln
+   \*.sw?
+
+6. Create Server folder for backend
+7. Initialize git in the root folder by the using the following code
+
+   git init
+   git add README.md
+   git commit -m "first commit"
+   git branch -M main
+   git remote add origin https://github.com/kalkidan-elel/Mern-Auth-Updated.git
+   git push -u origin main
